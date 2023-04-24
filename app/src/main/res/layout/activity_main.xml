@@ -13,17 +13,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="1"
-        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
         >
 
         <EditText
             android:id="@+id/edtNote"
             android:layout_width="0dp"
-            android:layout_height="40sp"
+            android:layout_height="50sp"
             android:hint="Enter a note"
             android:textSize="@dimen/_14sdp"
             android:layout_margin="@dimen/_2sdp"
-            android:layout_weight="0.95"
+            android:layout_weight="0.96"
             android:textColor="@color/white"
             android:textColorHint="#BFBFBF"
             android:padding="@dimen/_5sdp"
@@ -34,32 +35,25 @@
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="#B4C600"
+            android:backgroundTint="#E8FF00"
             android:text="Add"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="@dimen/_14sdp"
-            android:layout_weight="0.05"
+            android:layout_weight="0.04"
             android:layout_margin="@dimen/_2sdp"
             />
 
     </LinearLayout>
 
-    <RelativeLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvnotes"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
-
-        <TextView
-            android:id="@+id/txtNotes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:layout_gravity="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/_15sdp"
-            android:layout_centerInParent="true"
-            />
-    </RelativeLayout>
+        android:layout_margin="@dimen/_5sdp"
+        tools:listitem="@layout/item_layout"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
 
 
 </LinearLayout>
