@@ -22,13 +22,15 @@ class MainActivity : AppCompatActivity() {
         val notesRepository = NotesRepository(notesDao)
         val mainViewModel =  ViewModelProvider(this, MainViewModelFactory(notesRepository)).get(
             MainViewModel::class.java)
+        val adapter = NotesAdapter()
+        activityMainBinding.rvnotes.adapter = adapter
         mainViewModel.listNotes().observe(this) {
-            activityMainBinding.txtNotes.text = it.toString()
+           adapter.submitList(it)
         }
 
         activityMainBinding.btnAdd.setOnClickListener{
             if(activityMainBinding.edtNote.text!!.isEmpty()){
-                activityMainBinding.txtNotes.text="Empty"
+                Toast.makeText(this,"Please enter some note",Toast.LENGTH_SHORT).show()
             }
             else {
                 mainViewModel.insertNote(Notes(0,activityMainBinding.edtNote.text.toString()))
