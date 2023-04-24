@@ -14,7 +14,7 @@
         android:orientation="horizontal"
         android:weightSum="1"
         android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginHorizontal="@dimen/_7sdp"
         >
 
         <EditText
@@ -23,21 +23,21 @@
             android:layout_height="50sp"
             android:hint="Enter a note"
             android:textSize="@dimen/_14sdp"
-            android:layout_margin="@dimen/_2sdp"
+            android:layout_margin="@dimen/_1sdp"
             android:layout_weight="0.96"
             android:textColor="@color/white"
             android:textColorHint="#BFBFBF"
-            android:padding="@dimen/_5sdp"
+            android:paddingStart="@dimen/_7sdp"
             android:background="@drawable/edit_text_border"
             />
 
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="#E8FF00"
+            android:layout_height="@dimen/_40sdp"
+            android:backgroundTint="@color/black"
             android:text="Add"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="@dimen/_14sdp"
             android:layout_weight="0.04"
