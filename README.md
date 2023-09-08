@@ -1,9 +1,18 @@
-# android-mvvm-pattern-example
+# AnNote- The notes taking app
 
 Notes taking app, following the MVVM architectural pattern
 
-![Repository](https://user-images.githubusercontent.com/90695071/233838354-206f2dae-62ca-4983-9d59-b05256e488c8.png)
+### Play Store Link
 
+<a href="https://play.google.com/store/apps/details?id=com.sandeep.notesappmvvm">
+    <img alt="Get it on Google Play"
+        height="80"
+        src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" />
+</a> 
+
+### Design Pattern:
+
+![Repository](https://user-images.githubusercontent.com/90695071/233838354-206f2dae-62ca-4983-9d59-b05256e488c8.png)
 
 ### Project Structure:
 
@@ -14,6 +23,7 @@ Notes taking app, following the MVVM architectural pattern
                ├── Repository
           ├── View                
           ├── View Model        
+ 
 
 ### Gradle dependencies:
 
